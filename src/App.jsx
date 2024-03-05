@@ -17,8 +17,9 @@ function App() {
     <BrowserRouter>
       <ToastContainer />
       <Routes>
-        <Route element={<ProtectedRoute />}>
-          <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<ProtectedRoute />}>
+          <Route path={`/:id`} element={<Dashboard />} />
+          <Route path={`/`} element={<Dashboard />} />
         </Route>
 
         <Route path="/signin" element={<SignIn />} />

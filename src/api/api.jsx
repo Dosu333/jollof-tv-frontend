@@ -8,8 +8,9 @@ export const TOKEN_REFRESH = "/auth/token/refresh/";
 export const GET_USERS = "/auth/users/";
 export const RESET_PASSWORD = "/auth/users/reset-password/";
 export const CREATE_PASSWORD = "/auth/users/create-password/";
+export const GET_VIDEOS = "/tv/videos/";
 
-const authToken = `Bearer ${getCookie("id1")}`;
+const authToken = `${getCookie("id1")}`;
 const api = axios.create({
   baseURL: "https://jolloftv.pythonanywhere.com/api/v1/",
   headers: {
@@ -112,7 +113,7 @@ export const logUserOut = () => {
   if (window.confirm("Do you want to log out")) {
     deleteCookie("id1");
     deleteCookie("id2");
-    window.location.replace("/");
+    window.location.replace("/signin");
     toast.success("Logged Out!", {
       position: "top-right",
       autoClose: 3000,
@@ -122,3 +123,18 @@ export const logUserOut = () => {
   }
 };
 //Logout
+
+//GetVideos
+export const getVideosApi = async () => {
+  try {
+    const response = await api.get(GET_VIDEOS, {
+      headers: {
+        Authorization: `Bearer ${authToken}`,
+      },
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Error during getVideosApi:", error);
+  }
+};
+//GetVideos
