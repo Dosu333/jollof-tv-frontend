@@ -10,7 +10,7 @@ export const RESET_PASSWORD = "/auth/users/reset-password/";
 export const CREATE_PASSWORD = "/auth/users/create-password/";
 export const GET_VIDEOS = "/tv/videos/";
 
-const authToken = `${getCookie("id1")}`;
+
 const api = axios.create({
   baseURL: "https://jolloftv.pythonanywhere.com/api/v1/",
   headers: {
@@ -110,6 +110,7 @@ export const loginApi = async (data) => {
 
 //Logout
 export const logUserOut = () => {
+  
   if (window.confirm("Do you want to log out")) {
     deleteCookie("id1");
     deleteCookie("id2");
@@ -126,6 +127,7 @@ export const logUserOut = () => {
 
 //GetVideos
 export const getVideosApi = async () => {
+  const authToken = `${getCookie("id1")}`;
   try {
     const response = await api.get(GET_VIDEOS, {
       headers: {

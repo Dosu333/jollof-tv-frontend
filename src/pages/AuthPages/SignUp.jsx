@@ -103,7 +103,7 @@ const SignUp = () => {
   };
   return (
     <section className="grid justify-center bg-[#051724]  h-auto py-20">
-      <div className="bg-[#030f18] m-auto w-[40vw] place-content-center border-[#f0cf7b] border-[0.1px] lg:w-[500px] h-auto rounded-lg  px-[30px] flex flex-col md:border border-grey-400 md:pt-[25px] py-[50px] mx-[auto]">
+      <div className="bg-[#030f18] m-auto w-[90vw] place-content-center border-[#f0cf7b] border-[0.1px] lg:w-[500px] h-auto rounded-lg  px-[30px] flex flex-col md:border border-grey-400 md:pt-[25px] py-[50px] mx-[auto]">
         <div className="flex flex-col items-center">
           <img
             src="https://app.jollofradio.com/assets/jollofradio-horizontal.cc936d7a.png"
@@ -132,7 +132,7 @@ const SignUp = () => {
                   }));
                 }}
                 placeholder="First Name"
-                className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md md:px-4 placeholder:text-[#252f34]"
+                className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md px-2 placeholder:text-[#252f34]"
               />
             </div>
 
@@ -151,7 +151,7 @@ const SignUp = () => {
                   }));
                 }}
                 placeholder="Last Name"
-                className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md md:px-4 placeholder:text-[#252f34]"
+                className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md px-2 placeholder:text-[#252f34]"
               />
             </div>
           </div>
@@ -172,7 +172,7 @@ const SignUp = () => {
                   email: e.target.value,
                 }));
               }}
-              className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md md:px-4 placeholder:text-[#252f34]"
+              className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md px-2 placeholder:text-[#252f34]"
               placeholder="example@gmail.com"
             />
           </div>
@@ -193,7 +193,7 @@ const SignUp = () => {
                   phone: e.target.value,
                 }));
               }}
-              className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md md:px-4 placeholder:text-[#252f34]"
+              className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md px-2 placeholder:text-[#252f34]"
               placeholder="example@gmail.com"
             />
           </div>
@@ -215,7 +215,7 @@ const SignUp = () => {
                     country: e.target.value,
                   }));
                 }}
-                className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md md:px-4 placeholder:text-[#252f34]"
+                className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md px-2 placeholder:text-[#252f34]"
               />
             </div>
             <div className="flex flex-col w-full space-y-[12px]">
@@ -233,7 +233,7 @@ const SignUp = () => {
                     state: e.target.value,
                   }));
                 }}
-                className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md md:px-4 placeholder:text-[#252f34]"
+                className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md px-2 placeholder:text-[#252f34]"
               />
             </div>
 
@@ -252,7 +252,7 @@ const SignUp = () => {
                     city: e.target.value,
                   }));
                 }}
-                className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md md:px-4 placeholder:text-[#252f34]"
+                className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md px-2 placeholder:text-[#252f34]"
               />
             </div>
           </div>
@@ -274,7 +274,7 @@ const SignUp = () => {
                   password: e.target.value,
                 }));
               }}
-              className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md md:px-4 placeholder:text-[#252f34]"
+              className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md px-2 placeholder:text-[#252f34]"
               placeholder="XXXXXXX"
             />
             <div className="absolute right-0 top-[50%] transform translate-y-[-50%] h-[30px] text-[#ffffff46] text-[20px] pr-[10px] flex flex-cols items-center">

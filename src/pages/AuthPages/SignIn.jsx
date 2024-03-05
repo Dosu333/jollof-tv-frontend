@@ -96,7 +96,7 @@ const SignIn = () => {
 
   return (
     <section className="grid justify-center bg-[#051724]  h-[100vh]">
-      <div className="bg-[#030f18] m-auto w-[40vw] place-content-center border-[#f0cf7b] border-[0.1px] lg:w-[500px] h-auto rounded-lg  px-[30px] flex flex-col md:border border-grey-400 md:pt-[25px] py-[50px] mx-[auto]">
+      <div className="bg-[#030f18] m-auto w-[90vw] place-content-center border-[#f0cf7b] border-[0.1px] lg:w-[500px] h-auto rounded-lg  px-[30px] flex flex-col md:border border-grey-400 md:pt-[25px] py-[50px] mx-[auto]">
         <div className="flex flex-col items-center">
           <img
             src="https://app.jollofradio.com/assets/jollofradio-horizontal.cc936d7a.png"
@@ -123,7 +123,7 @@ const SignIn = () => {
                   email: e.target.value,
                 }));
               }}
-              className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md md:px-4 placeholder:text-[#252f34]"
+              className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md px-2 placeholder:text-[#252f34]"
               placeholder="example@gmail.com"
             />
           </div>
@@ -143,7 +143,7 @@ const SignIn = () => {
                   password: e.target.value,
                 }));
               }}
-              className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md md:px-4 placeholder:text-[#252f34]"
+              className="bg-[#0d1921] rounded-sm border-0 focus:ring-transparent focus:border-0 text-white w-full h-[40px] text-md px-2 placeholder:text-[#252f34]"
               placeholder="XXXXXXX"
             />
             <div className="absolute right-0 top-[50%] transform translate-y-[-50%] h-[30px] text-[#ffffff46] text-[20px] pr-[10px] flex flex-cols items-center">
@@ -159,12 +159,12 @@ const SignIn = () => {
             <Link to={"/signup"} className="text-[#f0cf7b] text-[12px]">
               Don't have an account? Sign up.
             </Link>
-            <Link
+            {/* <Link
               to={"/forgotten-password-email"}
               className="text-[#f0cf7b] text-[12px]"
             >
               Forgot Password?
-            </Link>
+            </Link> */}
           </div>
           <div className="mx-auto mb-[25px]">
             <button

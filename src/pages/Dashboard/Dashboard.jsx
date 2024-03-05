@@ -8,6 +8,7 @@ import ReactPlayer from "react-player";
 import { getVideosApi, logUserOut } from "../../api/api";
 import { useNavigate, useParams } from "react-router-dom";
 import VideoThumbnail from "react-video-thumbnail";
+import { getCookie } from "../../api/utility";
 
 const Dashboard = () => {
   const [showControls, setShowControls] = useState(false);
@@ -16,14 +17,18 @@ const Dashboard = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  const access = getCookie("id1");
+  const refresh = getCookie("id2");
+
   const getTheVideos = () => {
-    try {
-      getVideosApi().then((res) => {
-        setVideos(res);
-      });
-    } catch (error) {
-      console.error("Error fetching videos:", error);
-    }
+  if(access && refresh)
+  {
+    getVideosApi().then((res) => {
+      setVideos(res);
+    });
+  } else {
+    window.location.reload
+  }
   };
   useEffect(() => {
     getTheVideos();
@@ -40,11 +45,11 @@ const Dashboard = () => {
 
   useEffect(() => {
     // Find the video with the matching ID
-    const foundVideo = videos?.find((video) => video.id === id);
+    const foundVideo = videos?.find((video) => video?.id === id);
     setLoadedVideo(foundVideo);
   }, [id, videos]);
 
-  const otherVideos = videos?.filter((video) => video.id !== id);
+  const otherVideos = videos?.filter((video) => video?.id !== id);
 
   return (
     <section className="grid bg-[#051724]  h-[100vh] overflow-hidden">
@@ -126,9 +131,9 @@ const Dashboard = () => {
 
         <div className="w-[100%] h-[100%] lg:w-[30vw] overflow-auto px-2 py-5 bg-slate-100 ">
           {/* other videos  */}
-          {otherVideos.map((vid, i) => (
+          {otherVideos?.map((vid, i) => (
             <div
-            key={i}
+              key={i}
               className="p-5 flex gap-1 w-[100%] cursor-pointer"
               onClick={() => navigate(`/${vid?.id}`)}
             >
