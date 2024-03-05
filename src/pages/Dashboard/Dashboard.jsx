@@ -52,7 +52,7 @@ const Dashboard = () => {
   const otherVideos = videos?.filter((video) => video?.id !== id);
 
   return (
-    <section className="grid bg-[#051724]  h-[100vh] overflow-hidden">
+    <section className="grid bg-[#051724]  h-[100vh] overflow-y-auto overflow-x-hidden">
       {" "}
       <div className="flex justify-between items-center px-5">
         <img
