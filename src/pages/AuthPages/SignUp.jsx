@@ -111,7 +111,7 @@ const SignUp = () => {
             alt="Jollof.M"
           />
           <span className="text-white text-[20px] font-normal text-center md:mt-[15px] mb-10 capitalize">
-            Sign Up as user
+          Ready to dive in? Create your account
           </span>
         </div>
         <div className="flex flex-col pt-0">
